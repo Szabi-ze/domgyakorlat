@@ -30,3 +30,47 @@ function ujBekezdesHozzaad() {
     }
     
 }
+
+function stilusKeszites() {
+    // Bármilyen div ami egy p-ben van
+    const DivBenP = document.querySelectorAll("div p");
+    
+    DivBenP.forEach(function(p) {
+        p.style.color = "blue"    
+    }
+    )
+
+    const DivGyerek = document.querySelectorAll("div > p");
+
+    DivGyerek.forEach(function(elem){
+        elem.style.fontWeight = "bold"
+    }
+    )
+
+
+    // Div utáni p testvér
+
+    const DivTestverP = document.querySelectorAll("div ~ p");
+
+    DivTestverP.forEach(function(cucc){
+        cucc.style.textDecoration = "underline"
+    }
+    )
+
+    // Szülőjének 2. eleme
+
+    const PGyerekMasodik = document.querySelectorAll("p:nth-child(2)");
+
+    PGyerekMasodik.forEach(function(cucc){
+        cucc.style.backgroundColor = "lightyellow"
+    }
+    )
+
+    const MasodikPTestver = document.querySelectorAll("p:nth-of-type(2)");
+
+    MasodikPTestver.forEach(function(cucc){
+        cucc.style.border = "red 1px solid"
+    }
+    )
+
+}
