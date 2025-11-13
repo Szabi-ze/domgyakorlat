@@ -13,3 +13,20 @@ function ujDivHozzaad() {
     container.append(ujdiv)
 }
 
+function ujBekezdesHozzaad() {
+    let p = document.createElement("p");
+    const container = document.getElementById("container");
+    const divek = container.getElementsByTagName("div");
+
+    const utolsoDiv = divek[divek.length-1]
+
+
+    p.innerHTML = "Ez egy új bekezdés szövege"
+
+    if (divek.length > 0) {
+        utolsoDiv.appendChild(p)
+    } else {
+        alert("Először divet hozzon létre!")
+    }
+    
+}
